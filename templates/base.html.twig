@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+            {{ encore_entry_link_tags('vuejs') }}
+        {% endblock %}
+    </head>
+    <body>
+    <div id="app" class="container">
+        <div class="bg-gray-800 text-white p-4 h-16 border-b border-gray-200">
+            Ma navbar
+        </div>
+        {% block body %}
+
+        {% endblock %}
+    </div>
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+            {{ encore_entry_script_tags('vuejs') }}
+        {% endblock %}
+    </body>
+</html>

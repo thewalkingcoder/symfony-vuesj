@@ -332,6 +332,27 @@ Il ne reste plus qu'à l'utiliser dans notre template twig
 
 ```
 
+# Polyfill
+
+De base webpackEncore ajoute tous les polyfills nécessaire pour que votre application soit le plus compatible possible.
+
+Cependant lors de l'utilisation de promise dans un composant vuejs j'ai rencontré sur IE 11 une erreur de style
+
+```
+
+Promise est indéfinie
+
+```
+
+La solution trouvée a été de re-importer les polyfills nécessaire.
+
+```
+assets/vuejs/index.js
+
+import "core-js/stable";
+import "regenerator-runtime/runtime";
+
+
 
 ## Références
 

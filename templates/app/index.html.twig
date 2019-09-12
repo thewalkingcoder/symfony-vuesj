@@ -6,6 +6,15 @@
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam praesentium odit recusandae ipsa, repellat fugit numquam aliquid eaque! Culpa reprehenderit ex corrupti saepe earum, exercitationem deserunt harum fugiat dolorem nostrum.</p>    
     <div><hello-word/></div>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam praesentium odit recusandae ipsa, repellat fugit numquam aliquid eaque! Culpa reprehenderit ex corrupti saepe earum, exercitationem deserunt harum fugiat dolorem nostrum.</p>
-
-
+    <div class="p-4">
+    {{form_start(form) }}
+    
+        <div>{{ form_label(form.nom)}}</div>
+        <div>{{ form_widget(form.nom)}}</div>
+        <div>{{ form_label(form.dateNaissance)}}</div>
+        <div>{{ form_widget(form.dateNaissance, {attr: { class: 'hidden' }})}}</div>
+        <wrapper-date-picker input-cible="test_dateNaissance"></wrapper-date-picker>
+        <button class=" mt-5 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">valider</button>
+    {{form_end(form) }}
+    </div>
 {% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}App{% endblock %}
+
+{% block body %}
+    <form enctype="multipart/form-data" method="post">
+        <input type="text" name="nom" value=""/>
+        <input type="file" name="fichier" />
+        <button>valider</button>
+    </form>
+
+{% endblock %}

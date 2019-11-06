@@ -8,6 +8,9 @@ new Vue({
     components: {
         HelloWord,
         WrapperDatePicker
+    },
+    data: {
+        toto : "Yoooooo"
     }
 });
 

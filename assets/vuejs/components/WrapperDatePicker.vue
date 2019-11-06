@@ -33,7 +33,8 @@
     }
 </script>
 <template>    
-    <div>           
+    <div>     
+        
         <datepicker :language="fr" :format="dateFormat" @selected="dateSelected" />
     </div>
 </template>

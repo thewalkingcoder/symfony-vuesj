@@ -10,7 +10,7 @@
     {{form_start(form) }}
     
         <div>{{ form_label(form.nom)}}</div>
-        <div>{{ form_widget(form.nom)}}</div>
+        <div>{{ form_widget(form.nom,  { 'attr': { 'v-model': 'toto' }} )}}</div>
         <div>{{ form_label(form.dateNaissance)}}</div>
         <div>{{ form_widget(form.dateNaissance, {attr: { class: 'hidden' }})}}</div>
         <wrapper-date-picker input-cible="test_dateNaissance"></wrapper-date-picker>

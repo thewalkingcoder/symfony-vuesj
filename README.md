@@ -352,6 +352,7 @@ assets/vuejs/index.js
 import "core-js/stable";
 import "regenerator-runtime/runtime";
 
+```
 
 ## Tests
 

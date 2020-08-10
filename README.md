@@ -353,6 +353,80 @@ import "core-js/stable";
 import "regenerator-runtime/runtime";
 
 
+## Tests
+
+```
+
+yarn add @vue/test-utils jest --dev
+
+```
+
+si besoin
+
+```
+yarn add jest jest-canvas-mock babel-jest vue-jest --dev 
+```
+
+package.json
+
+```
+"scripts": {
+    ...
+     "test": "jest"
+}
+```
+
+jest.config.js
+
+```
+module.exports = {
+    moduleFileExtensions: [
+        'js',
+        'jsx',
+        'json',
+        'vue'
+    ],
+    transform: {
+        '^.+\\.vue$': 'vue-jest',
+        '^.+\\.jsx?$': 'babel-jest'
+    },
+    transformIgnorePatterns: [
+        '/node_modules/'
+    ],
+    moduleNameMapper: {
+        '^@/(.*)$': '<rootDir>/src/$1'
+    },
+    testMatch: [
+        '**/tests/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)'
+    ],
+    testURL: 'http://localhost/'
+}
+
+```
+
+babel.config.js
+
+```
+module.exports = {
+    presets: [
+        [
+            '@babel/preset-env',
+            {
+                targets: {
+                    node: 'current',
+                },
+            },
+        ],
+    ],
+};
+
+```
+
+
+
+
+
+
 
 ## Références
 
